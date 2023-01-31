@@ -27,11 +27,14 @@ import java.util.Random;
  * @link http:/devonline.academy/java
  */
 public class Game {
-
     private final DataPrinter dataPrinter;
+
     private final ComputerMove computerMove;
+
     private final UserMove userMove;
+
     private final WinnerVerifier winnerVerifier;
+
     private final DrawVerifier drawVerifier;
 
     public Game(DataPrinter dataPrinter,
@@ -54,6 +57,7 @@ public class Game {
             computerMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
         }
+
         while (true) {
             userMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
