@@ -14,13 +14,16 @@
  *    limitations under the License.
  */
 
-package tictactoe.project;
+package tictactoe.project.component;
+
+import tictactoe.project.model.GameTable;
 
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public class ComputerMove {
-    public void make(GameTable gameTable) {
+public class DrawVerifier {
+    public boolean isDraw(GameTable gameTable) {
+        return false;
     }
 }

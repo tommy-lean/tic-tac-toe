@@ -14,17 +14,11 @@
  *    limitations under the License.
  */
 
-package tictactoe.project;
+package tictactoe.project.model;
 
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public class DataPrinter {
-
-    public void printMappingTable() {
-    }
-
-    public void printGameTable(GameTable gameTable) {
-    }
+public class GameTable {
 }

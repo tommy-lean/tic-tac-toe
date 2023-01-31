@@ -16,6 +16,8 @@
 
 package tictactoe.project;
 
+import tictactoe.project.component.*;
+
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java

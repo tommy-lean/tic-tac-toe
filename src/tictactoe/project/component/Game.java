@@ -14,8 +14,10 @@
  *    limitations under the License.
  */
 
-package tictactoe.project;
+package tictactoe.project.component;
 
+
+import tictactoe.project.model.GameTable;
 
 import java.util.Random;
 

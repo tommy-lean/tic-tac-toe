@@ -14,14 +14,19 @@
  *    limitations under the License.
  */
 
-package tictactoe.project;
+package tictactoe.project.component;
+
+import tictactoe.project.model.GameTable;
 
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public class DrawVerifier {
-    public boolean isDraw(GameTable gameTable) {
-        return false;
+public class DataPrinter {
+
+    public void printMappingTable() {
+    }
+
+    public void printGameTable(GameTable gameTable) {
     }
 }
