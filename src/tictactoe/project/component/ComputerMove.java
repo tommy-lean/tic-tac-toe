@@ -16,7 +16,10 @@
 
 package tictactoe.project.component;
 
+import tictactoe.project.model.Cell;
 import tictactoe.project.model.GameTable;
+
+import java.util.Random;
 
 /**
  * @author tommy_lean
@@ -24,5 +27,15 @@ import tictactoe.project.model.GameTable;
  */
 public class ComputerMove {
     public void make(GameTable gameTable) {
+        final Random random = new Random();
+        while (true) {
+            int row = random.nextInt(3);
+            int col = random.nextInt(3);
+            Cell randomCell = new Cell(row, col);
+            if (gameTable.isEmpty(randomCell)) {
+                gameTable.setSign(randomCell, '0');
+                return;
+            }
+        }
     }
 }

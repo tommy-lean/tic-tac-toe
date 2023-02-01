@@ -29,7 +29,7 @@ public class GameTable {
             {' ', ' ', ' '}
     };
 
-    public boolean isEmpty(Cell cell) {
+    public boolean isEmpty(final Cell cell) {
         return table[cell.getRow()][cell.getRow()] == ' ';
     }
 
