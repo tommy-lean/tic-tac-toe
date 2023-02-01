@@ -16,17 +16,34 @@
 
 package tictactoe.project.component;
 
+import tictactoe.project.model.Cell;
 import tictactoe.project.model.GameTable;
 
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public class DataPrinter {
+public class DataPrinter extends GameTable {
 
     public void printMappingTable() {
+        System.out.println("-------------");
+        System.out.println("| 7 | 8 | 9 |");
+        System.out.println("-------------");
+        System.out.println("| 4 | 5 | 6 |");
+        System.out.println("-------------");
+        System.out.println("| 1 | 2 | 3 |");
+        System.out.println("-------------");
     }
 
     public void printGameTable(GameTable gameTable) {
+        for (int i = 0; i < 3; i++) {
+            System.out.println("-------------");
+            System.out.print("|");
+            for (int j = 0; j < 3; j++) {
+                System.out.print(" " + gameTable.getSign(new Cell(i, j)) + " |");
+            }
+            System.out.println();
+        }
+        System.out.println("-------------");
     }
 }
