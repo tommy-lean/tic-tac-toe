@@ -29,8 +29,12 @@ public class GameTable {
             {' ', ' ', ' '}
     };
 
+    public char[][] getTable() {
+        return table;
+    }
+
     public boolean isEmpty(final Cell cell) {
-        return table[cell.getRow()][cell.getRow()] == ' ';
+        return table[cell.getRow()][cell.getCol()] == ' ';
     }
 
     public char getSign(final Cell cell) {
