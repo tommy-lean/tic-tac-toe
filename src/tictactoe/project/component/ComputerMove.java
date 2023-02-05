@@ -34,6 +34,7 @@ public class ComputerMove {
             Cell randomCell = new Cell(row, col);
             if (gameTable.isEmpty(randomCell)) {
                 gameTable.setSign(randomCell, '0');
+                System.out.println("Computer made a move!");
                 return;
             }
         }
