@@ -22,27 +22,9 @@ import tictactoe.project.model.Cell;
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public class CellNumberConverter {
-    private final char[][] mapping =
-            {{'1', '2', '3'},
-                    {'4', '5', '6'},
-                    {'7', '8', '9'}};
+public interface CellNumberConverter {
 
-    public Cell toCell(char number) {
-        for (int i = 0; i < mapping[i].length; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (number == mapping[i][j]) {
-                    return new Cell(i, j);
-                }
-            }
-        }
-        return null;
-    }
+    Cell toCell(char number);
 
-    public char toNumber(Cell cell) {
-        return mapping[cell.getRow()][cell.getCol()];
-    }
-
-
+    char toNumber(Cell cell);
 }
-
