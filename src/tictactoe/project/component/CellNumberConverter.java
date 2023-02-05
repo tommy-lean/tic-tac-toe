@@ -14,24 +14,35 @@
  *    limitations under the License.
  */
 
-package tictactoe.project;
+package tictactoe.project.component;
 
-import tictactoe.project.component.*;
+import tictactoe.project.model.Cell;
 
 /**
  * @author tommy_lean
  * @link http:/devonline.academy/java
  */
-public final class Launcher {
-    public static void main(final String[] args) {
-        CellNumberConverter cellNumberConverter = new CellNumberConverter();
-        final Game game = new Game(
-                new DataPrinter(cellNumberConverter),
-                new ComputerMove(),
-                new UserMove(cellNumberConverter),
-                new WinnerVerifier(),
-                new CellVerifier()
-        );
-        game.play();
+public class CellNumberConverter {
+    private final char[][] mapping =
+            {{'1', '2', '3'},
+                    {'4', '5', '6'},
+                    {'7', '8', '9'}};
+
+    public Cell toCell(char number) {
+        for (int i = 0; i < mapping[i].length; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (number == mapping[i][j]) {
+                    return new Cell(i, j);
+                }
+            }
+        }
+        return null;
     }
+
+    public char toNumber(Cell cell) {
+        return mapping[cell.getRow()][cell.getCol()];
+    }
+
+
 }
+
