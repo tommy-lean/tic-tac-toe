@@ -57,7 +57,6 @@ public class Game {
             computerMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);
         }
-
         while (true) {
             userMove.make(gameTable);
             dataPrinter.printGameTable(gameTable);

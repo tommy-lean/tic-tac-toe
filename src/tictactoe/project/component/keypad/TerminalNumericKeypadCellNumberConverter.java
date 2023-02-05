@@ -25,25 +25,14 @@ import tictactoe.project.model.Cell;
  */
 public class TerminalNumericKeypadCellNumberConverter implements CellNumberConverter {
 
-    private final char[][] mapping =
-            {{'1', '2', '3'},
-                    {'4', '5', '6'},
-                    {'7', '8', '9'}};
-
     @Override
     public Cell toCell(char number) {
-        for (int i = 0; i < mapping[i].length; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (number == mapping[i][j]) {
-                    return new Cell(i, j);
-                }
-            }
-        }
-        return null;
+        int value = number - '0' - 1;
+        return new Cell(value / 3, value % 3);
     }
 
     @Override
     public char toNumber(Cell cell) {
-        return mapping[cell.getRow()][cell.getCol()];
+        return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
     }
 }
