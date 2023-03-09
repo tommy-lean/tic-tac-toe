@@ -18,6 +18,6 @@
 @rem     @email  k-tomilin@mail.ru
 @rem
 @echo off
-java -jar tic-tac-toe-1.0-SNAPSHOT.jar
+java -jar ${project.build.finalName}.jar
 echo Press any key for exit
 pause
