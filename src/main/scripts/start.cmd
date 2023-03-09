@@ -16,7 +16,7 @@
 @rem
 @rem     @author tommy_lean
 @rem     @email  k-tomilin@mail.ru
-@rem
+
 @echo off
 java -jar ${project.build.finalName}.jar
 echo Press any key for exit

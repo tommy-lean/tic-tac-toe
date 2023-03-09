@@ -20,6 +20,7 @@
 # @author tommy_lean                                                                                                   #
 # @email  k-tomilin@mail.ru                                                                                            #
 ########################################################################################################################
+cd "$(dirname "$0")" || exit
 
 java -jar ${project.build.finalName}.jar
 echo "Press enter to continue . . ."
