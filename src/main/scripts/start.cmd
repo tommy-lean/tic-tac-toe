@@ -18,6 +18,6 @@
 @rem     @email  k-tomilin@mail.ru
 
 @echo off
-java -jar ${project.build.finalName}.jar
+java -jar ${project.build.finalName}-release.jar
 echo Press any key for exit
 pause
